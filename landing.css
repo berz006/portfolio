@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: caslon-antique;
+    src: url(fonts/CaslonAntique.ttf);
+}
+
+body {
+    position: relative;
+    background: rgb(60, 16, 16);
+    text-align: center;
+    font-family: caslon-antique;
+    color: rgb(247, 222, 165);
+}
+
+main {
+    position: relative;
+    top: 175px;
+    height: 500px;
+    width: 85%;
+    max-width: 700px;
+    /* background-color: rgba(128, 128, 128, .1); */
+    border-radius: 25px;
+}
+
+main img {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    opacity: 0.05;
+    border-radius: 25px;
+    /* background-color: rgba(128, 128, 128, .1); */
+}
+
+h1 {
+    position: relative;
+    top: 15px;
+    font-weight: lighter;
+    opacity: 0;
+    animation-name: welcome;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-size: 40px;
+}
+
+h2 {
+    position: relative;
+    top: 25px;
+    font-weight: lighter;
+    opacity: 0;
+    animation-name: welcome;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-size: 50px;
+    animation-delay: .75s;
+}
+
+p {
+    position: relative;
+    top: 75px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    top: 150px;
+    color: rgb(247, 222, 165);
+    border: 1px solid rgb(247, 222, 165);
+    padding: 10px;
+    opacity: 0;
+    animation-name: welcome;
+    animation-duration: 2s;
+    animation-delay: 13.25s;
+    animation-fill-mode: forwards;
+}
+
+.btn:hover {
+    background-color: rgba(247, 222, 165, .4);
+    color: rgb(59, 16, 16);
+}
+
+#first, #second, #third, #fourth, #fifth {
+    opacity: 0;
+    animation-name: welcome;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#first {
+    animation-delay: 2.5s;
+}
+
+#second {
+    animation-delay: 4.75s;
+}
+
+#third {
+    animation-delay: 7s;
+}
+
+#fourth {
+    animation-delay: 9.25s;
+}
+
+#fifth {
+    animation-delay: 11.5s;
+}
+
+@keyframes welcome {
+    0%   {opacity: 0}
+    100% {opacity: 1}
+}
+
+@media only screen and (max-width: 700px) {
+    main img {
+        transform: rotate(90deg);
+        top: 50px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    main {
+        height: 700px;
+        width: auto;
+    }
+
+    /* main img {
+        transform: rotate(90deg);
+        top: 75px;
+    } */
+
+    p {
+        top: 50px;
+    }
+
+    .btn {
+        top: 100px;
+    }
+}
